@@ -1,92 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="A simple, editable profile website starter for GitHub Pages.">
-  <title>Sunita Sharmaa | Personal Website</title>
-  <link rel="stylesheet" href="assets/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Thoughtfully handmade herbal care products inspired by nature." />
+  <title>Earth & Herb | Handmade Herbal Care</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+  <!-- Update this announcement when your delivery / order status changes. -->
+  <div class="announcement-bar">
+    <span class="announcement-dot"></span>
+    <span>We’re currently going <strong>online!</strong> — handmade with care, coming to you soon.</span>
+  </div>
+
   <header class="site-header">
-    <a class="brand" href="#home" aria-label="Alex Morgan home">AM<span>.</span></a>
-    <nav aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#services">What I Do</a>
-      <a href="#contact">Contact</a>
+    <a class="brand" href="#home" aria-label="Earth and Herb home">
+      <span class="brand-mark"><i class="fa-solid fa-leaf"></i></span>
+      <span><strong>earth & herb</strong><small>HERBAL CARE, MADE WITH LOVE</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#home">Home</a>
+      <a href="#products">Our Products</a>
+      <a href="#story">Our Story</a>
+      <a href="#reviews">Kind Words</a>
+      <a class="nav-contact" href="#contact">Contact us <i class="fa-solid fa-arrow-right"></i></a>
     </nav>
   </header>
 
   <main>
-    <section class="hero" id="home">
+    <section class="hero" id="home" aria-label="Welcome">
       <div class="hero-copy">
-        <p class="eyebrow">HELLO, WELCOME TO MY WEBSITE</p>
-        <!-- EDIT: Replace the sample name, title and description below. -->
-        <h1>Hi, I'm <span>Sunita Sharma.</span></h1>
-        <h2>Handcrafting Wellness</h2>
-        <p class="intro">I love making homemade herbal products with care, love, and thoughtfully selected natural ingredients. My goal is to bring traditional herbal goodness into everyday life and share the beauty of nature through simple, handmade creations.</p>
+        <span class="eyebrow"><i class="fa-solid fa-seedling"></i> A LITTLE CLOSER TO NATURE</span>
+        <h1>Care that feels<br><em>naturally you.</em></h1>
+        <p>Small-batch herbal care, thoughtfully made with nature-inspired ingredients and a whole lot of heart.</p>
         <div class="hero-actions">
-          <a class="button button-primary" href="#contact">Contact Us</a>
-          <a class="button button-secondary" href="#about">Learn More</a>
+          <a class="button button-primary" href="#products">Explore our collection <i class="fa-solid fa-arrow-down"></i></a>
+          <a class="text-link" href="#story">Get to know us <i class="fa-solid fa-arrow-right"></i></a>
         </div>
-        <div class="quick-contact">
-          <span aria-hidden="true">☎</span>
-          <!-- EDIT: Replace this dummy phone number. -->
-          <a href="tel:+15550102345">+91 7678235027</a>
-          <span class="dot">•</span>
-          <a href="mailto:hello@example.com">hello@example.com</a>
-        </div>
+        <div class="hero-note"><span class="note-icon"><i class="fa-solid fa-heart"></i></span><span><strong>Made in small batches</strong><small>Personal care, with a personal touch.</small></span></div>
       </div>
-      <div class="hero-art">
-        <div class="image-frame">
-          <img src="assets/home-image.jpg" alt="Abstract illustration of a person working at a desk">
+
+      <div class="hero-visual">
+        <div class="hero-image-frame">
+          <div class="hero-carousel" id="heroCarousel" aria-label="Herbal care image carousel">
+            <img class="carousel-image active" src="assets/home-page.jpg" alt="Herbal care products surrounded by natural ingredients">
+            <img class="carousel-image" src="assets/home-page.jpg" alt="Handmade herbal care collection">
+            <img class="carousel-image" src="assets/home-page.jpg" alt="Nature-inspired herbal products">
+          </div>
+          <div class="image-caption"><span>ROOTED IN NATURE</span><i class="fa-solid fa-sun"></i></div>
         </div>
-        <div class="floating-card"><span class="sparkle">✦</span><div><strong>Ideas into impact</strong><small>One project at a time</small></div></div>
-        <div class="circle circle-one"></div>
-        <div class="circle circle-two"></div>
+        <div class="floating-stamp"><i class="fa-solid fa-leaf"></i><span>Simple ingredients.<br>Thoughtful care.</span></div>
+        <div class="hero-sparkle sparkle-one">✳</div><div class="hero-sparkle sparkle-two">✳</div>
+        <div class="carousel-dots" id="carouselDots" aria-label="Choose carousel slide">
+          <button class="carousel-dot active" aria-label="Slide 1"></button>
+          <button class="carousel-dot" aria-label="Slide 2"></button>
+          <button class="carousel-dot" aria-label="Slide 3"></button>
+        </div>
       </div>
     </section>
 
-    <section class="about section" id="about">
-      <p class="eyebrow">A LITTLE ABOUT ME</p>
-      <h2>Good work starts with a good conversation.</h2>
-      <p>I love making homemade herbal products with care, love, and thoughtfully selected natural ingredients. My goal is to bring traditional herbal goodness into everyday life and share the beauty of nature through simple, handmade creations.
-
-        Every product I make reflects my love for natural living, my dedication to quality, and my belief in the power of nature. Thank you for supporting my small business and being a part of my journey! </p>
+    <section class="trust-strip" aria-label="Our values">
+      <div><i class="fa-solid fa-leaf"></i><span>Nature-inspired ingredients</span></div>
+      <div><i class="fa-solid fa-hand-holding-heart"></i><span>Made with care</span></div>
+      <div><i class="fa-solid fa-recycle"></i><span>Mindful everyday rituals</span></div>
+      <div><i class="fa-solid fa-seedling"></i><span>Small-business goodness</span></div>
     </section>
 
-    <section class="services section" id="services">
-      <p class="eyebrow">WHAT I DO</p>
-      <h2>How I can help</h2>
-      <div class="service-grid">
-        <article class="service-card"><span class="service-icon">✳</span><h3>Creative Design</h3><p>Clear, attractive visuals tailored to your goals and audience.</p></article>
-        <article class="service-card"><span class="service-icon">⌘</span><h3>Web Experiences</h3><p>Simple, responsive web pages that work on phones and computers.</p></article>
-        <article class="service-card"><span class="service-icon">♡</span><h3>Personal Support</h3><p>Friendly collaboration from the first idea to the final details.</p></article>
+    <section class="section products-section" id="products">
+      <div class="section-heading">
+        <div><span class="eyebrow">A LITTLE SOMETHING FOR YOU</span><h2>Our herbal <em>favourites</em></h2></div>
+        <p>Discover simple, nature-inspired essentials for your everyday self-care ritual.</p>
+      </div>
+      <div class="product-grid">
+        <article class="product-card">
+          <div class="product-image"><img src="assets/home-page.jpg" alt="Herbal face care product"><span class="product-tag">BESTSELLER</span></div>
+          <div class="product-info"><div class="product-category">FACE CARE</div><h3>Neem & Tulsi Face Pack</h3><p>A refreshing herbal blend for a feel-good skincare ritual.</p><div class="rating"><span>★★★★★</span><small>4.8 <b>(24)</b></small></div><div class="product-bottom"><span class="product-price">₹249 <small> / 50 g</small></span><a class="whatsapp-order" href="https://wa.me/917678235027?text=Hello%2C%20I%27m%20interested%20in%20Neem%20%26%20Tulsi%20Face%20Pack." target="_blank" rel="noopener">Enquire <i class="fa-brands fa-whatsapp"></i></a></div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="assets/home-page.jpg" alt="Herbal hair care product"><span class="product-tag tag-soft">HAIR RITUAL</span></div>
+          <div class="product-info"><div class="product-category">HAIR CARE</div><h3>Herbal Hair Oil</h3><p>A comforting oiling ritual inspired by traditional care.</p><div class="rating"><span>★★★★★</span><small>4.9 <b>(18)</b></small></div><div class="product-bottom"><span class="product-price">₹299 <small> / 100 ml</small></span><a class="whatsapp-order" href="https://wa.me/917678235027?text=Hello%2C%20I%27m%20interested%20in%20Herbal%20Hair%20Oil." target="_blank" rel="noopener">Enquire <i class="fa-brands fa-whatsapp"></i></a></div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="assets/home-page.jpg" alt="Herbal body scrub product"><span class="product-tag tag-pink">GENTLE CARE</span></div>
+          <div class="product-info"><div class="product-category">BODY CARE</div><h3>Ubtan Body Scrub</h3><p>A traditional-inspired blend for your weekly care routine.</p><div class="rating"><span>★★★★★</span><small>4.7 <b>(16)</b></small></div><div class="product-bottom"><span class="product-price">₹199 <small> / 75 g</small></span><a class="whatsapp-order" href="https://wa.me/917678235027?text=Hello%2C%20I%27m%20interested%20in%20Ubtan%20Body%20Scrub." target="_blank" rel="noopener">Enquire <i class="fa-brands fa-whatsapp"></i></a></div></div>
+        </article>
+        <article class="product-card">
+          <div class="product-image"><img src="assets/home-page.jpg" alt="Aloe vera gel product"><span class="product-tag">EVERYDAY ESSENTIAL</span></div>
+          <div class="product-info"><div class="product-category">SKIN CARE</div><h3>Aloe Comfort Gel</h3><p>A lightweight, soothing-feel addition to your daily routine.</p><div class="rating"><span>★★★★★</span><small>4.8 <b>(21)</b></small></div><div class="product-bottom"><span class="product-price">₹179 <small> / 100 g</small></span><a class="whatsapp-order" href="https://wa.me/917678235027?text=Hello%2C%20I%27m%20interested%20in%20Aloe%20Comfort%20Gel." target="_blank" rel="noopener">Enquire <i class="fa-brands fa-whatsapp"></i></a></div></div>
+        </article>
+      </div>
+      <p class="product-disclaimer"><i class="fa-solid fa-circle-info"></i> These are sample listings for this college project. Please edit product details, prices and ratings before publishing.</p>
+    </section>
+
+    <section class="story-section" id="story">
+      <div class="story-image-wrap">
+        <img src="assets/home-page.jpg" alt="Natural ingredients and handmade herbal products">
+        <div class="story-image-note"><i class="fa-solid fa-heart"></i><span>Made slowly.<br>Loved deeply.</span></div>
+      </div>
+      <div class="story-copy">
+        <span class="eyebrow">THE HANDS BEHIND THE HERBS</span>
+        <h2>A small dream,<br><em>grown with love.</em></h2>
+        <p>I love making homemade herbal products with care, love, and thoughtfully selected natural ingredients. My goal is to bring traditional herbal goodness into everyday life and share the beauty of nature through simple, handmade creations.</p>
+        <p>Every product I make reflects my love for natural living, my dedication to quality, and my belief in the power of nature. Thank you for supporting my small business and being a part of my journey!</p>
+        <div class="author-signoff"><span class="signoff-line"></span><span><strong>Your Name Here</strong><small>Founder & Herbal Care Maker</small></span></div>
       </div>
     </section>
 
-    <section class="contact section" id="contact">
-      <p class="eyebrow">LET'S CONNECT</p>
-      <h2>Have a project in mind?</h2>
-      <p>Send a message or give me a call. I'd love to hear what you're working on.</p>
-      <div class="contact-actions">
-        <a class="button button-primary" href="mailto:hello@example.com">hello@example.com</a>
-      
-<a href="https://wa.me/917678235027" target="_blank" rel="noopener noreferrer">
-  +91 7678235027
-</a>
-
+    <section class="section reviews-section" id="reviews">
+      <div class="section-heading reviews-heading"><div><span class="eyebrow">KIND WORDS, WARM HEARTS</span><h2>Notes from our <em>community</em></h2></div><p>A few little love notes from happy customers.</p></div>
+      <div class="review-grid">
+        <article class="review-card"><div class="review-stars">★★★★★</div><p>“The packaging was lovely and it felt like such a thoughtful little treat.”</p><div class="review-person"><img src="assets/home-page.jpg" alt="Customer portrait placeholder"><span><strong>Priya S.</strong><small>Verified customer · Sample review</small></span></div></article>
+        <article class="review-card"><div class="review-stars">★★★★★</div><p>“Loved the handmade feel. The whole experience was warm and personal.”</p><div class="review-person"><img src="assets/home-page.jpg" alt="Customer portrait placeholder"><span><strong>Meera K.</strong><small>Verified customer · Sample review</small></span></div></article>
+        <article class="review-card"><div class="review-stars">★★★★★</div><p>“A lovely addition to my self-care routine. Would love to explore more.”</p><div class="review-person"><img src="assets/home-page.jpg" alt="Customer portrait placeholder"><span><strong>Ananya R.</strong><small>Verified customer · Sample review</small></span></div></article>
       </div>
+      <p class="review-disclaimer">Review names and comments are placeholders for demonstration. Replace with genuine customer feedback before publishing.</p>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-intro"><span class="eyebrow">WE’D LOVE TO HEAR FROM YOU</span><h2>Let’s talk <em>naturally.</em></h2><p>Have a question about a product or want to place an order? Send us a note or reach out directly on WhatsApp.</p><div class="contact-detail"><span><i class="fa-brands fa-whatsapp"></i></span><div><small>CHAT WITH US</small><strong>+91 76782 35027</strong></div></div><div class="contact-detail"><span><i class="fa-regular fa-envelope"></i></span><div><small>EMAIL</small><strong>hello@example.com</strong></div></div></div>
+      <form class="contact-form" id="contactForm">
+        <h3>Send a little note</h3><p>Fill in the details below and your email app will open with your message ready to send.</p>
+        <label for="fullName">Your name</label><input id="fullName" name="name" type="text" placeholder="e.g. Riya Sharma" required minlength="2">
+        <label for="email">Email address</label><input id="email" name="email" type="email" placeholder="you@example.com" required>
+        <label for="topic">What can we help with?</label><select id="topic" name="topic" required><option value="">Choose a topic</option><option>Product enquiry</option><option>Order enquiry</option><option>Feedback</option><option>Something else</option></select>
+        <label for="message">Your message</label><textarea id="message" name="message" rows="3" placeholder="Tell us a little more..." required minlength="5"></textarea>
+        <button class="button button-primary submit-button" type="submit">Prepare email <i class="fa-solid fa-paper-plane"></i></button>
+        <small class="form-note"><i class="fa-solid fa-lock"></i> Your email address is checked by the browser before continuing.</small>
+        <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      </form>
     </section>
   </main>
 
-  <footer>
-    <p>© <span id="year">2026</span> Alex Morgan. Built with care.</p>
-    <a href="#home">Back to top ↑</a>
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#home"><span class="brand-mark"><i class="fa-solid fa-leaf"></i></span><span><strong>earth & herb</strong><small>HERBAL CARE, MADE WITH LOVE</small></span></a>
+    <p>Rooted in nature. Made with heart.</p>
+    <div class="footer-social"><a href="https://wa.me/917678235027" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a><a href="#contact" aria-label="Email us"><i class="fa-regular fa-envelope"></i></a><a href="#home" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></a></div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Earth & Herb. College project demo.</span><span>Made with <i class="fa-solid fa-heart"></i> and a little bit of nature.</span></div>
   </footer>
+
+  <a class="floating-whatsapp" href="https://wa.me/917678235027?text=Hello%21%20I%27d%20love%20to%20know%20more%20about%20your%20herbal%20care%20products." target="_blank" rel="noopener" aria-label="Chat with us on WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i><span>Chat with us</span>
+  </a>
+
   <script>
-    // Automatically update the copyright year.
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Carousel: replace repeated home-page.jpg files with your own images whenever ready.
+    const slides = document.querySelectorAll('.carousel-image');
+    const dots = document.querySelectorAll('.carousel-dot');
+    let currentSlide = 0;
+    function showSlide(index) {
+      slides.forEach((slide, i) => slide.classList.toggle('active', i === index));
+      dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+      currentSlide = index;
+    }
+    dots.forEach((dot, i) => dot.addEventListener('click', () => showSlide(i)));
+    setInterval(() => showSlide((currentSlide + 1) % slides.length), 4500);
+
+    // Mobile navigation
+    const menuToggle = document.getElementById('menuToggle');
+    const mainNav = document.getElementById('mainNav');
+    menuToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+      menuToggle.innerHTML = isOpen ? '<i class="fa-solid fa-xmark"></i>' : '<i class="fa-solid fa-bars"></i>';
+    });
+    mainNav.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.innerHTML = '<i class="fa-solid fa-bars"></i>';
+    }));
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Static GitHub Pages cannot send email directly. This opens the visitor's email app
+    // with the form details addressed to the placeholder below.
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      if (!this.reportValidity()) return;
+      const data = new FormData(this);
+      const recipient = 'dummy@email.com'; // Change to your real email address.
+      const subject = encodeURIComponent('Website enquiry: ' + data.get('topic'));
+      const body = encodeURIComponent(
+        'Name: ' + data.get('name') + '\\n' +
+        'Email: ' + data.get('email') + '\\n' +
+        'Topic: ' + data.get('topic') + '\\n\\n' +
+        'Message:\\n' + data.get('message')
+      );
+      document.getElementById('formStatus').textContent = 'Opening your email app. Please press Send to deliver the message.';
+      window.location.href = 'mailto:' + recipient + '?subject=' + subject + '&body=' + body;
+    });
   </script>
 </body>
 </html>

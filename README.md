@@ -1,39 +1,27 @@
-# GitHub Pages Starter Website
+# Earth & Herb — Herbal Care E-commerce Demo
 
-A complete, responsive static website you can upload directly to a GitHub repository. It does not need Node.js, a build command, or any dependencies.
+A responsive static storefront for a college project. It is designed for GitHub Pages and uses plain HTML, CSS, and JavaScript.
 
-## Project structure
+## Files
+- `index.html` — page structure, sample products, carousel, contact form, WhatsApp links, and small JavaScript behaviours.
+- `style.css` — responsive styling and earthy color theme.
+- `assets/home-page.jpg` — replace this placeholder image with your own image.
 
-```text
-github-pages-starter/
-├── index.html
-├── README.md
-└── assets/
-    ├── style.css
-    └── home-image.svg
-```
+## Customize before publishing
+1. Replace every `assets/home-page.jpg` use with your own image path or keep it repeated for now.
+2. Change `earth & herb`, product names, descriptions, sample prices, ratings, review names/comments, and `Your Name Here`.
+3. Change `dummy@email.com` in the contact form script to your real email.
+4. Change `917678235027` in WhatsApp links if the contact number changes. WhatsApp links use country code `91` without a plus sign or spaces.
+5. Update the top announcement banner copy.
 
-## Edit the sample content
-
-Open `index.html` and search for `Alex Morgan`, `Creative Designer & Digital Creator`, the sample description, `+1 (555) 010-2345`, and `hello@example.com`. Replace them with your own details. Update the copyright/name in the footer too.
-
-The home illustration is `assets/home-image.svg`; replace it with your own image if you want. If you use a different filename, update the image `src` in `index.html`.
+## Important: static-site email behaviour
+GitHub Pages hosts static files only. The contact form validates the name, email address, topic, and message in the browser, then opens the visitor's default email app with a pre-filled email to `dummy@email.com`. The visitor still needs to press **Send**. It does not send an email silently or store submissions. For automatic form delivery, connect a form backend/service (for example, Formspree) or build a server-side endpoint.
 
 ## Publish on GitHub Pages
+1. Upload `index.html`, `style.css`, and the `assets` folder to the root of your repository.
+2. Open the repository on GitHub → **Settings** → **Pages**.
+3. Under **Build and deployment**, choose **Deploy from a branch**.
+4. Select your branch (usually `main`) and folder `/(root)`, then save.
+5. Wait for the deployment link to appear. The home page must be named exactly `index.html`, and file/folder capitalization must match.
 
-1. Create a GitHub repository (for a project site, any repository name is fine).
-2. Upload **the contents of this folder** to the repository's root. `index.html` must be at the top level—not inside another nested project folder.
-3. Open **Settings → Pages** in the repository.
-4. Under **Build and deployment**, select **Deploy from a branch**.
-5. Select branch `main` and folder `/(root)`, then click **Save**.
-6. Wait a few minutes and open the URL shown in the Pages settings. A project site normally looks like `https://YOUR-USERNAME.github.io/REPOSITORY-NAME/`.
-
-For a user/org site whose repository is named exactly `YOUR-USERNAME.github.io`, the URL is `https://YOUR-USERNAME.github.io/`.
-
-## If you still see a 404
-
-- Confirm `index.html` is in the repository root and the filename is lowercase.
-- Confirm Pages is enabled and configured for the branch/folder where you uploaded the files.
-- Use the URL shown in Settings → Pages; project sites need the repository name in the path.
-- Wait a few minutes after saving, then refresh or try a private/incognito window.
-- GitHub Pages serves static HTML/CSS/JS; it does not run server-side code such as PHP.
+All customer reviews and product details in this demo are illustrative placeholders. Replace them with genuine information before using the site for a real business.
